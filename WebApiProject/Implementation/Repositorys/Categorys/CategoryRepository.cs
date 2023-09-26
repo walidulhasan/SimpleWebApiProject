@@ -14,8 +14,8 @@ public class CategoryRepository : CommonRepository<Category>, ICategoryRepositor
     {
         _dbCon = dbCon;
     }
-    public async Task<List<Category>> GetCategoriesList()
+    public async Task<List<Category>> GetCategoriesList(CancellationToken cancellationToken)
     {
-        return await _dbCon.Category.ToListAsync();
+        return await _dbCon.Category.ToListAsync(cancellationToken);
     }
 }

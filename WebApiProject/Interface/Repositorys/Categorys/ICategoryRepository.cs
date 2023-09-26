@@ -5,6 +5,6 @@ namespace WebApiProject.Interface.Repositorys.Categorys
 {
     public interface ICategoryRepository : ICommonRepository<Category>
     {
-        Task<List<Category>> GetCategoriesList();
+        Task<List<Category>> GetCategoriesList(CancellationToken cancellationToken);
     }
 }
